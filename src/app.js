@@ -6,6 +6,8 @@ const cors = require("cors")
 const apiRouter = require("./routes/api/apiRouter.js")
 const postsRouter = require("./routes/posts/postsRouter.js")
 const usersRouter = require("./routes/users/usersRouter")
+const notificationsRouter = require("./routes/notifications/notificationsRouter")
+// Sequelize Postgres DB Connection
 
 // Variables
 const PORT = parseInt(process.env.PORT) || 8080
@@ -22,6 +24,7 @@ app.use(
 app.use("/api", apiRouter)
 app.use("/posts", postsRouter)
 app.use("/users", usersRouter)
+app.use("/notifications", notificationsRouter)
 app.get("/", (req, res) => {
   console.log("server GET request at root route \\")
   res.send("Hello World!")

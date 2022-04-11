@@ -8,11 +8,15 @@
 - github push update
 - Kubernetes
 - Deploy rest server... heroku?
-  -docker image build workflow in development
+- docker image build workflow in development
+- Express Backend Validator
 
 ### WIP
 
-- Fetch data with React client from server REST api
+- Sequelize CLI Database Migrations
+- Setup sequelize PostGreSQL client
+- Setup notifications table
+- Fetch notifications with React Client from Express server api via PostgreSQL
 
 ### Finished Goods
 
@@ -54,13 +58,13 @@ PostgreSQL values are in single quotes ‘’
 
 <!-- dockerhub -->
 
-https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+<!-- https://nodejs.org/en/docs/guides/nodejs-docker-webapp/ -->
 
-https://faun.pub/step-by-step-guide-to-dockerize-a-node-js-express-application-cb6be4159cf1
+<!-- https://faun.pub/step-by-step-guide-to-dockerize-a-node-js-express-application-cb6be4159cf1 -->
 
-docker tag local-image:tagname new-repo:tagname
+<!-- docker tag local-image:tagname new-repo:tagname
 docker push new-repo:tagname
-docker push joshjacobbaker/backendexpressserverpostgres:tagname
+docker push joshjacobbaker/backendexpressserverpostgres:tagname -->
 
 <!-- curl -X POST -H "Content-Type: application/json" \
     -d '{"title": "newTitle, "content": "newContent", "userId": "5"}' \
@@ -71,4 +75,8 @@ docker push joshjacobbaker/backendexpressserverpostgres:tagname
 
 <!-- https://date-fns.org/docs/Getting-Started -->
 
-sudo docker build -t joshjacobbaker/backendexpressserverpostgres:latest .
+<!-- sudo docker build -t joshjacobbaker/backendexpressserverpostgres:latest . -->
+
+<!-- https://sequelize.org/docs/v6/core-concepts/model-basics/ -->
+
+<!-- https://www.youtube.com/watch?v=ikJ5AXDj3go&list=PLpPnRKq7eNW1-2dnfzYkDcwFxOWxKiyAy&index=6 -->
