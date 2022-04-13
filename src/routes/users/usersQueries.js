@@ -1,14 +1,11 @@
-// const pool = require("../../database/connection/postgresPoolConnection")
+const { user } = require("../../database/models/index")
 
 // GET all users
 const getUsers = async (request, response) => {
   console.log("getUsers")
-  // pool.query("SELECT * FROM public.userstable ORDER BY id ASC", (error, results) => {
-  //   if (error) {
-  //     throw error
-  //   }
-  //   response.status(200).json(results.rows)
-  // })
+
+  const allUsers = await user.findAll({})
+  response.status(200).json(allUsers)
 }
 
 // GET a single user
@@ -18,12 +15,12 @@ const getUserById = async (request, response) => {
   console.log("get single user")
   const id = parseInt(request.params.id)
 
-  // pool.query("SELECT * FROM public.userstable WHERE id = $1", [id], (error, results) => {
-  //   if (error) {
-  //     throw error
-  //   }
-  //   response.status(200).json(results.rows)
-  // })
+  const singleUser = await user.findAll({
+    where: {
+      id: id,
+    },
+  })
+  response.status(200).json(singleUser)
 }
 
 // POST a new user

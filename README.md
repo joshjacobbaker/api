@@ -13,13 +13,14 @@
 
 ### WIP
 
-- Sequelize CLI Database Migrations
+- Update Sequelize queries for CRUD operations
 - Setup sequelize PostGreSQL client
 - Setup notifications table
 - Fetch notifications with React Client from Express server api via PostgreSQL
 
 ### Finished Goods
 
+- Sequelize CLI Database Migrations
 - Created an API endpoint that returned JSON data to client
 - Docker Postgresql
 - API endpoint

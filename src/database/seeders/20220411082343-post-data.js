@@ -1,6 +1,22 @@
-"use strict"
+// "use strict"
 
 const postsData = require("../postsData.json")
+// const filteredPosts = postsData.map(({ id, ...rest }) => {
+//   return rest
+// })
+
+// const formatArray = postsData.map((object) => `'${JSON.stringify(object)}'`)
+// const filteredPostsStringify = JSON.stringify(filteredPosts)
+
+// Need to update data
+// userId id -> id userId
+// userId -> userid
+// createdAt: new Date(),
+// updatedAt: new Date(),
+
+const newPostsData = postsData.map(({ id, userId, title, body }) => {
+  return { id, userid: userId, title, body, reactions: "", date: "", createdAt: new Date(), updatedAt: new Date() }
+})
 
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -13,7 +29,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
-    await queryInterface.bulkInsert("posts", postsData, {})
+    await queryInterface.bulkInsert("posts", newPostsData, {})
   },
 
   async down(queryInterface, Sequelize) {
