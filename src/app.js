@@ -1,7 +1,12 @@
 const express = require("express")
 const bodyParser = require("body-parser")
-const cors = require("cors")
 
+// CORS Configuration
+const cors = require("cors")
+const corsOptions = {
+  origin: "http://localhost:3000",
+  optionsSuccessStatus: 200,
+}
 // Routers
 const apiRouter = require("./routes/api/apiRouter.js")
 const postsRouter = require("./routes/posts/postsRouter.js")
@@ -13,7 +18,7 @@ const notificationsRouter = require("./routes/notifications/notificationsRouter"
 const PORT = parseInt(process.env.PORT) || 8080
 
 const app = express()
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
